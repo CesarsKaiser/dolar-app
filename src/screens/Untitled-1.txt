@@ -1,0 +1,52 @@
+ <View>
+                <StatusBar style="light"/>
+                <View style= {styles.boxContainer}>
+                    <Pressable 
+
+                    >
+                        <Text>dolarBcv</Text>
+                    </Pressable>
+                </View>
+
+                <View style= {styles.boxContainer}>
+                    <Pressable style= {styles.pressable}>
+                        <Text>dolarParalelo</Text>
+                    </Pressable>
+                </View>
+
+                <View style= {styles.boxContainer}>
+                    <Pressable style= {styles.pressable}>
+                        <Text>dolar</Text>
+                    </Pressable>
+                </View>
+            </View> 
+
+            <View style={styles.graphContainer}>
+                <LineChart
+                    data={linedata}
+                    width={330} // from react-native
+                    height={180}
+                    margin={5}
+                    yAxisLabel={'$'}
+                    chartConfig={{
+                        backgroundColor: '#ea8800',
+                        backgroundGradientFrom: '#fb8c00',
+                        backgroundGradientTo: '#ffa726',
+                        decimalPlaces: 2, // optional, defaults to 2dp
+                        color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                        style: {
+                            borderRadius: 16
+                                }
+                    }}
+
+                    bezier
+                    style={{
+                        marginVertical: 8,
+                        borderRadius: 16
+                    }}
+                />                    
+            </View>
+
+            <View style={styles.tableContainer}>
+                <TableContainer/>
+            </View>
